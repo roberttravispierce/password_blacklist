@@ -1,7 +1,7 @@
 module PasswordBlacklist
   class Checker
     def initialize
-      file_path = File.expand_path('../../../data/Top95Thousand-probable.txt', __FILE__)
+      file_path = File.expand_path('../../../data/Top304Thousand-probable-v2.txt', __FILE__)
 
       @data = File.read(file_path)
     end

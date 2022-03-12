@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Gordon Chan']
   spec.email         = ['developer.gordon+github@gmail.com']
 
-  spec.summary       = 'Checks a password against a 100k blacklist.'
+  spec.summary       = 'Checks a password against a 300k blacklist.'
   spec.description   = 'A simple Ruby library to check if a given string is
-    present in a blacklist of 95,000 common passwords'
+    present in a blacklist of 304,000 common passwords'
   spec.homepage      = 'https://www.github.com/gchan/password_blacklist'
   spec.license       = 'MIT'
 

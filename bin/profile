@@ -27,7 +27,7 @@ report.pretty_print(report_options)
 
 # Array
 report = MemoryProfiler.report do
-  file_path = File.expand_path('../../data/Top95Thousand-probable.txt', __FILE__)
+  file_path = File.expand_path('../../data/Top304Thousand-probable-v2.txt', __FILE__)
   blacklist = File.read(file_path)
   array     = blacklist.split("\n")
 
@@ -42,7 +42,7 @@ report.pretty_print(report_options)
 
 # Set
 report = MemoryProfiler.report do
-  file_path = File.expand_path('../../data/Top95Thousand-probable.txt', __FILE__)
+  file_path = File.expand_path('../../data/Top304Thousand-probable-v2.txt', __FILE__)
   blacklist = File.read(file_path)
   array     = blacklist.split("\n")
   set       = array.to_set
