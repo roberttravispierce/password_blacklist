@@ -8,7 +8,7 @@ Check the presence of a string in a blacklist of the top 304,000 commonly used p
 
 This very simple Ruby library can be integrated into your registration/authentication system to prevent users from setting commonly used (and easy to guess) passwords.
 
-This gem has an insignificant memory footprint with an execution cost of approximately 1 ms. A memory persistence option is available to further reduce execution time.
+This gem has an insignificant memory footprint with an execution cost of approximately 3 ms. A memory persistence option is available to further reduce execution time.
 
 ## Devise Extension
 
@@ -54,6 +54,16 @@ checker.blacklisted?("pokemon")
 
 checker.blacklisted?("AccurateUnicornCoalPaperclip")
 => false
+```
+### Performance and memory
+
+The lastest version (0.5.0) uses a larger wordlist and will incur a larger memory footprint, and longer processing time than previous versions.
+```
+841.74 kB allocated on 95k wordlist # old size
+2.83 MB allocated on 304k wordlist (~3.36x more) # new size
+
+2110.9 i/s on 95k wordlist # old speed
+613.7 i/s on 304 wordlist (~3.44x slower). # new speed
 ```
 
 ## Supported Ruby versions
